@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    /* background-image:linear-gradient(#333,#111); */
+    background-color: #fff
+}
+
+.containerSoda {
+    /* position: absolute; */
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    margin: auto;
+}
+
+.containerSoda .slide {
+    display: flex;
+    margin:0 auto;
+}
+
+.slide.slide1,
+.slide.slide2 {
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 800px;
+    background-size: contain;
+    transition:.1s all ease-in-out
+}
+.slide.slide1 {
+    background-image: url(../img/skullKid.png);
+    background-color: cornflowerblue;
+    flex-grow: 5;
+}
+
+.slide.slide2 {
+    background-image: url(../img/skullKidSilouet.png);
+    background-color: chocolate;
+    flex-grow: 1;
+}
