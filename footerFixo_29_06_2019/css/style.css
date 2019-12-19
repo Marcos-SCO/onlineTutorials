@@ -1,0 +1,118 @@
+*{
+	margin:0;
+	padding:0
+}
+img{
+	width:100%
+}
+body{
+	font-family:sans-serif
+}
+.background{
+	display:grid;
+	align-items:center;
+	justify-content:center;
+	color:#fff;
+	align-self:center;
+	align-self:flex-end
+}
+.background a{
+	display:grid;
+	align-items:center;
+	justify-content:center;
+	color:#fff;
+	align-self:center;
+	text-decoration:none
+}
+.background::before{
+	content:'';
+	position:absolute;
+	background:#0000004f;
+	width:100%;
+	height:100vh;
+	z-index:10
+}
+
+.backgroundText{
+	z-index:999;
+	font-size:300%
+}
+.backgroundText p{
+	color:#b22;
+	font-weight:900;
+	text-transform:uppercase;
+	font-size:50%;
+	background:#fff;
+	max-width:245px;
+	padding:.5%;
+	box-sizing:border-box;
+	border-radius:1%
+}
+section{
+	position:relative;
+	width:100%;
+	min-height:100vh;
+	z-index:10;
+	padding:2%;
+	box-sizing:border-box;
+	background:#fff
+}
+section img{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	object-fit:cover
+}
+section h2{
+	margin:0;
+	padding:0;
+	font-size:2rem
+}
+section p{
+	font-size:1.1rem
+}
+.fixed-footer{
+    position:fixed;
+	bottom:0;
+	z-index:1;
+	width:100%;
+	height:400px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	color:#fff;
+	background:url(../img/kaede.jfif);
+	background-size:contain;
+	font-size:2rem;
+	text-transform:uppercase
+}
+
+.margin400px{
+	margin-bottom:400px;
+    display:grid;
+    align-items:center;
+    justify-content:center
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
