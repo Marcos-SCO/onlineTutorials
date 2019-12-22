@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Digital Clock UI Design Using CSS3 & Vanilla Javascript | HTML</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="container">
+
+        <section id="clock">
+            <header>
+                <span id="dia">DATA: </span>
+                <h2>Hora atual | Agora são...</h2>
+            </header>
+            <time id="time">
+                <div>
+                    <span id="hour">00</span>
+                    <span>Horas</span>
+                </div>
+                <div>
+                    <span id="minutes">00</span>
+                    <span>Minutos</span>
+                </div>
+                <div>
+                    <span id="seconds">00</span>
+                    <span>Segundos</span>
+                </div>
+            </time>
+        </section>
+
+    </div>
+
+    <script>
+        // Helpers
+        function qSelect(item) {
+            return document.querySelector(item);
+        }
+        let dia = qSelect('#dia');
+        let hours = qSelect('#hour');
+        let minutes = qSelect('#minutes');
+        let seconds = qSelect('#seconds');
+
+        let d = new Date().getDate();
+        let mes = new Date().getMonth();
+        let y = new Date().getFullYear();
+        dia.append(`${d}/${mes}/${y}`);
+        setInterval(function clock() {
+            let h = new Date().getHours();
+            let m = new Date().getMinutes();
+            let s = new Date().getSeconds();
+
+            // dia.innerHTML = `${d}/${mes}/${y}`;
+            //dia.append(`${d}/${mes}/${y}`);
+            hours.innerHTML = h;
+            minutes.innerHTML = m;
+            seconds.innerHTML = s;
+        }, 1000);
+    </script>
+
+</body>
+
+</html>

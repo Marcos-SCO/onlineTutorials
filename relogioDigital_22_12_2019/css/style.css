@@ -1,0 +1,76 @@
+*{
+    margin:0;
+    padding:0;
+    /* box-sizing:border-box; */
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    background-color:#060a1f
+}
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh
+}
+#dia {
+    color:#fff
+}
+#clock{
+    padding: 1rem
+}
+#clock h2{
+    display: block;
+    color:#fff;
+    text-align: center;
+    margin: .8rem 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-size: .8rem
+}
+#clock #time{
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+#clock #time div{
+    margin: 0 5px;
+    color: #fff
+}
+@media (min-width:360px) {
+    #clock #time div{
+        -webkit-box-reflect: below 1.5px linear-gradient(transparent,#060a1fad)
+    }
+}
+#time div span{
+    display: block;
+    width: 100px;
+    height: 80px;
+    background:#2196f3;
+    color:#fff;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 2rem;
+    z-index: 10;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.2)
+}
+#time div span:nth-child(2){
+    height: 30px;
+    font-size: .7rem;
+    letter-spacing: .2rem;
+    font-weight: 500;
+    z-index: 0;
+    box-shadow: none;
+    background:#127fd6;
+    text-transform: uppercase
+}
+#time div:last-child span{
+    background:#ff006a
+} 
+#time div:last-child span:nth-child(2){
+    background:#ec0062
+} 
