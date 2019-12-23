@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Popup with blurred background Using CSS3 And Vanilla Javascript | Modal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="containerAll">
+        <section class="container" id="blur">
+            <main class="content">
+                <h2>
+                    Roller coaster amusement rides have origins back to ice slides constructed in 18th-century Russia.
+                </h2>
+                <img src="img/roller-coaster.jpg" alt="rooler coster">
+                
+                <a href="#" id="toggle">Saiba Mais..</a>
+            </main>
+        </section>
+    </div>
+
+    <div id="popup">
+        <a href="#" onclick="toggle()">X</a>
+        <h2 style="color:#111">
+            The world's oldest roller coasters descended from the "Russian Mountains," which were specially constructed
+            hills of snow.
+        </h2>
+        <p>
+            Roller coaster amusement rides have origins back to ice slides constructed in 18th-century Russia. Early
+            technology featured sleds or wheeled carts that were sent down hills of snow reinforced by wooden supports.
+            The technology evolved in the 19th century to feature railroad track using wheeled cars that were securely
+            locked to the track. Newer innovations emerged in the early 20th century with side friction and
+            underfriction technologies to allow for greater speeds and sharper turns. By the mid-to-late 20th century,
+            these elements intensified with the introduction of steel roller coaster designs and the ability for them to
+            invert riders.
+        </p>
+    </div>
+
+    <script>
+        // Helper
+        function qSelect(item) {
+            return document.querySelector(item);
+        }
+
+        function qSelectAll(item) {
+            return document.querySelectorAll(item);
+        }
+
+        function toggle() {
+            let blur = qSelect('#blur');
+            blur.classList.toggle('active');
+            let popup = qSelect('#popup');
+            popup.classList.toggle('active');
+        }
+
+        qSelect('#toggle').addEventListener('click', toggle);
+    </script>
+
+</body>
+
+</html>
