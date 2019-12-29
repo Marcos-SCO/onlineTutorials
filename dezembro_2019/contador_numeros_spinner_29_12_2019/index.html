@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number Input Spinner UI Design | CSS3 & Vanilla Javascript - 29_12_2019</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <section class="container">
+            <span class="next"></span>
+            <span class="prev"></span>
+            <div id="box">
+                <!-- <span>0</span> -->
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Helper 
+        function qSelect(item) {
+            return document.querySelector(item);
+        }
+
+        function qSelectAll(item) {
+            return document.querySelectorAll(item);
+        }
+
+        // Next / Prev buttons
+        let next = qSelect('.next');
+        let prev = qSelect('.prev');
+
+        // Event Listeners
+        next.addEventListener('click', nextNum);
+        prev.addEventListener('click', prevNum);
+
+        let numbers = qSelect('#box');
+
+        for (i = 0; i < 100; i++) {
+            let span = document.createElement('span');
+            span.textContent = i;
+            numbers.appendChild(span);
+        }
+
+        let num = numbers.getElementsByTagName('span');
+        let index = 0;
+
+        function nextNum() {
+            num[index].style.display = 'none';
+            index = (index + 1) % num.length;
+            num[index].style.display = 'initial';
+        }
+
+        function prevNum() {
+            if (index > 0) {
+                num[index].style.display = 'none';
+                index = (index - 1) % num.length;
+                num[index].style.display = 'initial';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
