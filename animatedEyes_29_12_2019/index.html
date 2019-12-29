@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animated Eyes Follow Mouse Cursor | Javascript Mousemove - 29/12/2019</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <section class="face">
+            <div class="eyes">
+                <div class="eye"></div>
+                <div class="eye"></div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Helper
+        function qSelec(item) {
+            return document.querySelector(item);
+        }
+
+        function qSelecAll(item) {
+            return document.querySelectorAll(item);
+        }
+
+        qSelec('body').addEventListener('mousemove', eyeBall);
+
+        function eyeBall() {
+            let eye = qSelecAll('.eye');
+
+            eye.forEach((eye) => {
+                let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2);
+
+                let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
+                
+                let radian = Math.atan2(event.pageX - x, event.pageY - y);
+
+                let rot = (radian * (180 / Math.PI) * -1) + 0;
+
+                eye.style.transform = 'rotate('+ rot + 'deg)';
+            });
+
+        }
+    </script>
+</body>
+
+</html>
