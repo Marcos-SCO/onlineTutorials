@@ -1,0 +1,49 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Poppins', sans-serif
+}
+
+#container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    overflow: hidden;
+    background:url(../img/witchs-house-1635770_1280.jpg)no-repeat #ffa center;
+    background-blend-mode: hard-light;
+    background-size:cover;
+    transition:.03s all ease-in-out;
+}
+#container:hover{
+    background-blend-mode: multiply;
+    transition:.03s all ease-in-out;
+}
+#container article{
+    clip-path:circle(300px at var(--x) var(--y));
+}
+.banner{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:100vh;
+    clip-path:circle(70px at var(--x) var(--y));
+}
+.content{
+    position:relative;
+    max-width:1100px;
+    z-index:1;
+    pointer-events:none;
+    user-select:none;
+    color:#fff;
+    padding:2rem;
+    margin:auto
+}
+.content h2{
+    font-size:3rem
+}
+.content p{
+    font-size:1.1rem;
+    text-align:justify;
+    line-height:1.3rem;
+}

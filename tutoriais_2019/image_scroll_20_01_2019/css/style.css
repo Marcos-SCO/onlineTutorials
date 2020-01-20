@@ -1,0 +1,57 @@
+body{
+	margin:0;
+	padding:0
+}
+
+.container {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:100vh
+}
+.sContainer {
+	width:100%;
+/*	max-width:1200px;*/
+	display:flex;
+	justify-content:space-between
+}
+@media (max-width:500px){
+	.sContainer{
+       flex-direction:column
+	}
+}
+.sContainer .box
+{
+	width:100%;
+	max-width:580px;
+	height:400px;
+	background:#000;
+	margin:.1%;
+	transition:ease-in-out .8s;
+	background-position:left
+}
+.sContainer .box.box1
+{
+	background:url(../img/Danganronpa-3-Zetsobu-Hen-visual.jpg);
+	background-size:cover
+}
+.sContainer .box.box2
+{
+	background:url(../img/VRAINS-VR_Form_Promo.png);
+	background-size:cover
+}
+.sContainer .box.box3
+{
+	background:url(../img/demonSlayer.jpg);
+	background-size:cover
+}
+
+.sContainer .box:hover{
+	background-position:bottom
+}
+
+
+
+
+
+

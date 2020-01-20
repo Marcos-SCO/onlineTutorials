@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Animated Scroll To Top Button Using Html CSS & Javascript
+    </title>
+</head>
+
+<body>
+
+    <div id=container>
+        <header id="topo">
+            <h1>Topo</h1>
+        </header>
+        <section id="top">
+            <a href="#"><img src="img/top.png"></a>
+        </section>
+
+        <footer id="footer">
+            Olá
+        </footer>
+    </div>
+    <script>
+        function gID(id){
+            return document.getElementById(id);
+        }
+        var scroll = gID('top');
+        window.addEventListener('scroll', () =>{
+            scroll.style.transform = "rotate("+window.pageYOffset+"deg)";
+        });
+    </script>
+</body>
+
+</html>

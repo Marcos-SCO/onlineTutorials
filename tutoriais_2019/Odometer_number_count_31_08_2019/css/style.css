@@ -1,0 +1,36 @@
+*{margin:0;padding:0}
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh
+}
+
+img{width:100%}
+
+.imgBx{
+    width:100px;
+    height:100px;
+    margin:0 auto;
+    border:1.5px solid #111;
+    border-radius:50%;
+    overflow:hidden;
+    box-shadow:0 1rem 1.5rem rgba(0,0,0,.2)
+}
+.imgBx img{
+    object-fit:cover
+}
+
+h2{
+    margin-top:1.5rem;
+    font-family:consolas;
+    text-align:center;
+    font-size:2rem
+}
+
+.odometer{
+    margin-top:1rem;
+    font-size:2.9rem;
+    text-align:center
+}

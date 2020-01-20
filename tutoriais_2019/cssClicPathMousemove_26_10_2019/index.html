@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="container">
+        <article>
+            <section class="banner"></section>
+            <section class="content">
+                <header>
+                    <h2>Halloween</h2>
+                </header>
+                <p>
+                    O que é Halloween:
+                    Halloween, ou Dia das Bruxas, é uma celebração popular de culto aos mortos comemorada anualmente no
+                    dia
+                    31
+                    de outubro.
+                    <br>
+                    O termo tem origem na expressão em inglês “All Hallow’s Eve” (Véspera de Todos os Santos), pois é
+                    comemorado
+                    um dia antes do feriado de 01 de novembro.
+                    <br>
+                    <br>
+                    A cultura de celebração do Halloween é muito forte em países de língua anglo-saxônica, sobretudo nos
+                    Estados
+                    Unidos. Com o tempo, o feriado ganhou popularidade e hoje é comemorado, ainda que em menor escala,
+                    em
+                    grande
+                    parte do mundo.
+                    <br>
+                    <br>
+                    A tradição do Halloween foi levada pelos irlandeses aos Estados Unidos, onde a data é considerada
+                    feriado.
+                </p>
+            </section>
+        </article>
+        <script>
+            var pos = document.documentElement;
+            pos.addEventListener("mousemove", e => {
+                pos.style.setProperty('--x', e.clientX + "px");
+                pos.style.setProperty('--y', e.clientY + "px");
+            });
+        </script>
+    </div>
+</body>
+
+</html>

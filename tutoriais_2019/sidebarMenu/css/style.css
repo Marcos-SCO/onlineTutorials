@@ -1,0 +1,235 @@
+html{scroll-behavior:smooth}
+body{
+	margin:0;
+	padding:0;
+	font-family:sans-serif;
+	overflow-x:hidden
+}
+
+input[type="checkbox"]{
+	z-index:100000;
+	cursor:pointer;
+	opacity:0
+}
+
+.icon{
+	z-index:100001;
+	background:#000;
+	pointer-events:none
+}
+
+input[type="checkbox"], .icon{
+	position:fixed;
+	right:20px;
+	top:20px;
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	padding:.01rem
+}
+
+.icon:before{
+	content: 'x';
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	color:#b22;
+	text-align:center;
+	line-height:50px;
+	text-transform:uppercase;
+	font-weight:700;
+	font-size:1.8rem
+}
+
+input[type="checkbox"]:checked ~ .icon:before{
+	content:'menu';
+	color:#fff;
+	font-size:1.2rem
+}
+
+ul{
+	position:fixed;
+	top:0;
+	left:0;
+	margin:0;
+	padding:50px 20px;
+	box-sizing:border-box;
+	width:300px;
+	height:100vh;
+	background:#000;
+	transition:.5s;
+	z-index:100000;
+	overflow-y:auto
+}
+
+input[type="checkbox"]:checked ~ header nav ul{
+	left:-300px
+}
+
+ul li{list-style:none}
+
+ul li a{
+	display:block;
+	color:#fff;
+	padding:10px;
+	box-sizing:border-box;
+	text-decoration:none;
+	font-size:24px;
+	font-weight:700;
+	transition:.5s
+}
+
+ul li a:hover{ 
+	transform:translateX(10px);
+	color:#ff0
+}
+
+section{
+	position:relative;
+	left:300px;
+	padding:100px;
+	box-sizing:border-box;
+	transition:.5s;
+	height:100vh
+}
+
+section h2{
+	margin:0;
+	padding:0;
+	font-size:36px
+}
+
+input[type="checkbox"]:checked ~ section{
+	left:0
+}
+
+
+#home{
+	text-align:center;
+	display:grid;
+	justify-content:center;
+	align-items:center;
+	background:url(../img/code.jpg)#607D8B fixed;
+	color:#fff
+}
+#home a{
+	color:#ff0;
+	text-transform:uppercase;
+	text-shadow:2px 5px #000;
+	text-decoration:none;
+	font-size:1.4rem;
+	align-self:flex-start
+}
+
+#titan{
+	background:url(../img/atackOnTitan.jpg)#000000ba;
+	color:#fff
+}
+#dangan{
+	background:url(../img//Danganronpa12.jpg)#000000ba;
+	color:#fff
+}
+
+#ace{
+	background:url(../img/aceAttorney.jpg)#000000ba;
+	color:#fff
+}
+
+#fire{
+	background:url(../img/fireForce.png)#000000ba;
+	color:#fff
+}
+
+#onePiece{
+	background:url(../img/onePiece.jpg)#000000ba;
+	color:#fff;
+	height:100%
+}
+
+#hunter{
+	background:url(../img/HxH.jpg)#000000ba;
+	color:#fff;
+}
+
+#source{
+	background:url(../img/source.jpg)no-repeat;
+	background-position:right;
+    color: #fff;
+}
+
+iframe{
+	width: 100%;
+    max-width: 600px;
+    opacity:1;
+    box-shadow: -2px -1px 12px black;
+    transition: .1s;
+}
+iframe:hover{
+	box-shadow: 0px -1px 20px 3px black;
+}
+
+#home, #titan, #dangan, #ace, #fire, #onePiece, #hunter{
+	background-repeat:no-repeat;
+/*	background-attachment:fixed;*/
+	background-size:cover;
+	background-blend-mode:multiply
+}
+
+@media (max-width:1000px){
+	section{
+		height:100%;
+		padding:1rem
+	}
+	#home{
+		height:100vh
+	}
+}
+
+/*Botão top Hover*/
+#topBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-size: 22px;
+    width: 50px;
+    height: 50px;
+    background: #ff0;
+    cursor: pointer;
+    outline: none;
+    display: none;
+	border:none;
+	border-radius:50%;
+	border:1px solid
+}
+
+footer{
+	text-align:center;
+    padding:.1rem;
+    box-sizing:border-box;
+    background:#000;
+    margin:0;
+    color:#fff;
+	text-transform:uppercase
+}
+
+#container {
+	position:relative;
+	width:100%;
+	overflow:hidden
+}
+
+@media (max-width:630px) {
+	
+	input[type="checkbox"], .icon {
+		z-index:9999999
+	}
+}
+
+
+
+
+
+
+
