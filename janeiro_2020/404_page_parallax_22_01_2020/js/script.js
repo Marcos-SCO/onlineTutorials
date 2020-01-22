@@ -14,3 +14,5 @@ window.onmousemove = (e) => {
     container.style.backgroundPositionX = x + 'px';
     container.style.backgroundPositionY = y + 'px';
 }
+
+// window.addEventListener('mousemove', (e) => {x = e.clientX; y = e.clientY; container.style.backgroundPositionX = x + 'px'; container.style.backgroundPositionY = y + 'px';});
