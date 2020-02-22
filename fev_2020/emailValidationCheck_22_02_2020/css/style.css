@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing:border-box; */
+    font-family: 'Open Sans', sans-serif;
+}
+
+html,
+body {
+    height: 100%
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    background-color: #373737
+}
+
+.mailSection h3 {
+    font-size: 1rem;
+    color: #f9f9f9;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-align: center
+}
+
+#form #email {
+    width:100%;
+    max-width: 300px;
+    background-color: #292929;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: .9rem
+}
+
+#form .inputBox {
+    position:relative;
+}
+
+#text {
+    position: absolute;
+    color: #000;
+    font-weight: 300;
+    font-size: italic;
+    padding: 12px 5px
+}
+
+#form .inputBox::before {
+    content: '';
+    position: absolute;
+    right: -13px;
+    top: 7px;
+    width: 24px;
+    height: 24px;
+    background-size: cover
+}
+
+#form.invalid .inputBox::before{
+    background-image: url(../img/invalid.png)
+}
+
+#form.valid .inputBox::before{
+    background-image: url(../img/valid.png)
+}
