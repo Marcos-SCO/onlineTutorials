@@ -1,3 +1,3 @@
 # onlineTutorials
 
-Repository to practice css with online tutorias youtube channel https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog
+Repository to practice css with online tutorials youtube channel https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog
